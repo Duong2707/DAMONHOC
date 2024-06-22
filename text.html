@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ứng dụng Hỗ Trợ Tìm Việc Làm</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Ứng Dụng Hỗ Trợ Tìm Việc Làm JobsConnect</h1>
+    <nav>
+      <ul>
+        <li><a href="#goi-ung-dung">Các Gói Ứng Dụng</a></li>
+        <li><a href="#tim-kiem-viec-lam">Tìm Kiếm Việc Làm</a></li>
+        <li><a href="#danh-gia-khach-hang">Đánh Giá Khách Hàng</a></li>
+        <li><a href="#khoa-hoc">Khóa Học</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="tim-kiem-viec-lam">
+  <h2>Tìm Kiếm Việc Làm</h2>
+  <div class="search-bar">
+    <input type="text" placeholder="Tìm kiếm theo thành phố hoặc ngành nghề" id="search-input">
+    <button class="search-btn" onclick="searchJobs()">Tìm Kiếm</button>
+  </div>
+  <div id="job-results">
+    <!-- Kết quả tìm kiếm việc làm sẽ hiển thị ở đây -->
+  </div>
+</section><hr>
+    <section id="job-listings">
+  <h2>Job Listings</h2>
+  <div class="job-grid">
+    <div class="job-card">
+      <h3>Software Engineer</h3>
+      <p>Seeking an experienced software engineer to join our growing team.</p>
+      <div class="job-details">
+        <div class="job-detail">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>San Francisco, CA</span>
+        </div>
+        <div class="job-detail">
+          <i class="fas fa-dollar-sign"></i>
+          <span>$100,000 - $120,000</span>
+        </div>
+        <div class="job-detail">
+          <i class="fas fa-briefcase"></i>
+          <span>Full-Time</span>
+        </div>
+      </div>
+      <a href="#" class="job-link">Apply Now</a>
+    </div>
+    <div class="job-card">
+      <h3>Digital Marketing Specialist</h3>
+      <p>We're looking for a talented digital marketing specialist to manage our online campaigns.</p>
+      <div class="job-details">
+        <div class="job-detail">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>New York, NY</span>
+        </div>
+        <div class="job-detail">
+          <i class="fas fa-dollar-sign"></i>
+          <span>$60,000 - $80,000</span>
+        </div>
+        <div class="job-detail">
+          <i class="fas fa-briefcase"></i>
+          <span>Full-Time</span>
+        </div>
+      </div>
+      <a href="#" class="job-link">Apply Now</a>
+    </div>
+  </div>
+</section><hr>
+
+    <section id="danh-gia-khach-hang">
+  <h2>Customer Reviews</h2>
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="review-content">
+        <p>"This app has really helped me find a suitable job."</p>
+      </div>
+      <div class="review-author">
+        <p>- Nguyen Van A</p>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-content">
+        <p>"The interface is easy to use and the features are very helpful."</p>
+      </div>
+      <div class="review-author">
+        <p>- Tran Thi B</p>
+      </div>
+    </div>
+  </div>
+</section><hr>
+    <section id="goi-ung-dung">
+      <h2>Các Gói Ứng Dụng</h2>
+      <div class="package-container">
+        <div class="package">
+          <h3>Gói Cơ Bản</h3>
+          <p>Tính năng cơ bản để tìm kiếm và ứng tuyển việc làm.</p>
+          <button class="package-btn">Mua Gói</button>
+        </div>
+        <div class="package">
+          <h3>Gói Pro</h3>
+          <p>Tính năng nâng cao để quản lý và theo dõi ứng tuyển.</p>
+          <button class="package-btn">Mua Gói</button>
+        </div>
+        <div class="package">
+          <h3>Gói Premium</h3>
+          <p>Tính năng cho doanh nghiệp với công cụ quản lý ứng viên.</p>
+          <button class="package-btn">Mua Gói</button>
+        </div>
+      </div>
+    </section><hr>
+    <section id="khoa-hoc">
+      <h2>Lời khuyên nghề nghiệp</h2>
+      <div class="course-container">
+        <div class="course">
+          <h3>Tester là gì? Những kỹ năng cần có để trở thành một tester?</h3>
+         <div class="course-image">
+          <img src="https://static.topcv.vn/cms/tester-la-gi-topcv64b768c3f1f4b.jpg" alt="">
+           </div>
+          <button class="course-btn">Xem Khóa Học</button>
+        </div>
+        <div class="course">
+          <h3>Cộng tác viên viết bài - Nghề "hái ra tiền"</h3>
+          <div class="course-image">
+          <img src="https://static.topcv.vn/cms/cong-tac-vien-viet-bai-3_result6004549949866.jpg" alt="">
+           </div>
+          <button class="course-btn">Xem Khóa Học</button>
+        </div>
+        <div class="course">
+          <h3>Ngành cơ khí là gì? Học ngành cơ khí ra làm gì?</h3>
+           <div class="course-image">
+          <img src="https://static.topcv.vn/cms/batch_nganh-co-khi-161cea1937798c65e03bdf05dbf.jpg" alt="">
+           </div>
+          <button class="course-btn">Xem Khóa Học</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+   <footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>This is a sample company footer. You can customize it to fit your needs.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Contact Us</h3>
+      <p>123 Example Street, City, Country</p>
+      <p>Phone: 123-456-7890</p>
+      <p>Email: info@example.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Example Company. All rights reserved.</p>
+  </div>
+</footer>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
