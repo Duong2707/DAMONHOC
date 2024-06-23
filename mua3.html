@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanh Toán Gói Mua Tài Khoản</title>
+  <link rel="stylesheet" href="style.css">
+  <style type="text/css">
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.plan-details {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gói Premium</h1>
+    <p>Mua tài khoản để sử dụng đầy đủ các tính năng của ứng dụng hỗ trợ việc làm.</p>
+    <div class="plan-details">
+      <h2>Đăng Ký</h2>
+      <p>Giá: <span class="price">499,000 VND/tháng</span></p>
+      <ul>
+        <li>Ưu tiên hiển thị hồ sơ ứng viên</li>
+        <li>Truy cập vào các khóa học và tài liệu học tập</li>
+        <li>Hỗ trợ tư vấn việc làm và gửi đơn xin việc không giới hạn </li>
+      </ul>
+      <button id="checkout-btn">Thanh Toán Ngay</button>
+    </div>
+  </div>
+
+  <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Thanh Toán</h2>
+      <form id="payment-form">
+        <label for="card-number">Số Thẻ:</label>
+        <input type="text" id="card-number" required>
+        <label for="expiry-date">Ngày Hết Hạn:</label>
+        <input type="text" id="expiry-date" required>
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" required>
+        <button type="submit">Thanh Toán</button>
+      </form>
+    </div>
+  </div>
+
+  <script >
+    // Get the modal and the close button
+var modal = document.getElementById("payment-modal");
+var closeButton = document.getElementsByClassName("close-button")[0];
+
+// Get the checkout button and attach a click event listener
+var checkoutButton = document.getElementById("checkout-btn");
+checkoutButton.addEventListener("click", function() {
+  modal.style.display = "block";
+});
+
+// Close the modal when the close button is clicked
+closeButton.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// Close the modal when the user clicks outside the modal
+window.addEventListener("click", function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+});
+
+// Handle the payment form submission
+var paymentForm = document.getElementById("payment-form");
+paymentForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Get the form data
+  var cardNumber = document.getElementById("card-number").value;
+  var expiryDate = document.getElementById("expiry-date").value;
+  var cvv = document.getElementById("cvv").value;
+
+  // Validate the form data (you'll need to add your own validation logic)
+  if (cardNumber && expiryDate && cvv) {
+    // Process the payment (you'll need to integrate with a payment gateway)
+    console.log("Payment processed successfully!");
+    modal.style.display = "none";
+  } else {
+    alert("Please enter valid payment details.");
+  }
+});
+  </script>
+</body>
+</html>
