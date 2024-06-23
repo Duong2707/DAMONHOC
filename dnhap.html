@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Sign Up</title>
+  <style>
+    /* CSS styles for the page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      <button type="submit" onclick="window.location.href='text.html';">Login</button>
+    </form>
+    <hr>
+    <h2>Sign Up</h2>
+    <form>
+      <label for="new-username">Username:</label>
+      <input type="text" id="new-username" name="new-username" placeholder="Enter a new username" required>
+      <label for="new-email">Email:</label>
+      <input type="text" id="new-email" name="new-email" placeholder="Enter your email" required>
+      <label for="new-password">Password:</label>
+      <input type="password" id="new-password" name="new-password" placeholder="Enter a new password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript code to handle form submissions
+    const loginForm = document.querySelector('form:first-of-type');
+    const signUpForm = document.querySelector('form:last-of-type');
+
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      // Add your login logic here
+      console.log('Login form submitted');
+    });
+
+    signUpForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      // Add your sign up logic here
+      console.log('Sign up form submitted');
+    });
+  </script>
+</body>
+</html>
